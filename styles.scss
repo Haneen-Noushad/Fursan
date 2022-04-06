@@ -1,0 +1,62 @@
+$bgclr:hsl(0, 5%, 80%);
+
+*{
+    box-sizing: border-box;
+    background-color: $bgclr;
+}
+@font-face {    
+    src: url(GreatVibes-Regular.ttf);
+    font-family: cur;
+}
+
+body {
+  margin: 0;
+  font-family: cur;
+  font-size: 220%;
+}
+
+.header {
+  text-align: center;
+  
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin: 0 5% 5%;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  img{
+    margin-top: 8px;
+    vertical-align: middle;    
+    position: relative;
+    filter: brightness(0.7);
+    &:hover{
+        position: relative;
+        filter: brightness(1.0);
+        transform: scale(1.25);        
+        z-index: 20;
+        transition: 1s;      
+    }
+  }
+  
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 600px)
+{ 
+  .column {
+    flex: 50%;
+    max-width: 50%;
+    img{
+      filter: brightness(1);
+    }
+  }  
+}
+
