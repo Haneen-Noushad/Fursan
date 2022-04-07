@@ -130,7 +130,7 @@ body {
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media (max-width: 700px) {
+@media only screen and (max-width: 786px) {
   .column {
     -webkit-box-flex: 50%;
         -ms-flex: 50%;
